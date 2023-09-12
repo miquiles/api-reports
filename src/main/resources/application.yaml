@@ -1,0 +1,19 @@
+server:
+  servlet:
+    context-path: /api
+spring:
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:file:C:/Users/Pedro Henrique/test;DB_CLOSE_DELAY=-1
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  azure:
+    storage:
+      connection-string: "DefaultEndpointsProtocol=https;AccountName=sto1repo;AccountKey=G5lkZkSDvrTLbnr5BIw3KJrHDvwvMh0lt7pf6WcQlPYulpOiv8xvO2GogrTDMLEGos4cqFbiQj+T+AStfKLEDQ==;EndpointSuffix=core.windows.net"
+      container-name: "reports"
